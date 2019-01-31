@@ -20,8 +20,8 @@ function factory(rect){
   element.style.position = "absolute"
   element.style.left = rect.x + "px";
   element.style.top = rect.y + "px";
-  element.style.height = rect.w/2 + "px";
-  element.style.width = rect.h/2 + "px";
+  element.style.height = rect.w + "px";
+  element.style.width = rect.h + "px";
   return element;
 }
 
