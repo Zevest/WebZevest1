@@ -1,0 +1,29 @@
+body{
+  font-family: Verdana,sans-serif;
+  background-image: linear-gradient(to top right, rgb(154, 235, 218), rgb(58, 130, 189));
+  height : 100vh;
+}
+
+.container {
+  padding: 2.5%;
+  width : 90%;
+  height : 70%;
+  background-image: linear-gradient( rgb(58, 130, 189) 90%, rgb(29, 65, 94));
+}
+
+.projectButton {
+  margin-left: 2.5%;
+  padding-top: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 2.5%;
+  width : 25%;
+  height : 10%;
+  cursor: pointer;
+  align-content: center;
+  text-align: center;
+  background-image: linear-gradient(#3dddad 90%,#1f6752);
+  float: left;
+}
+.projectButton:hover{
+  background-color: #f1f1ff;
+}
