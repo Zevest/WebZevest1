@@ -1,34 +1,67 @@
-body{
+body, html{
   font-family: Verdana,sans-serif;
-  background-image: linear-gradient(to top right, rgb(154, 235, 218), rgb(58, 130, 189));
-  height : 100vh;
-  width : 100vh;
+  margin: 0px;
+  overflow: hidden;
+  background: url(../ressources/background.jpg) no-repeat center;
+  background-position:top;
+  height: 100%;
+  background-size: cover;
+}
+.Title{
+  background-image: linear-gradient( rgba(58, 130, 189, 0.6) 90%, #1d415e);
+  position: absolute;
+  top : 2.5%;
+  left : 40%
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  width : 100%;
+  text-align: center;
+  color : #ffffff;
 }
 
 .container {
+  position:absolute;
   padding: 2.5%;
-  width : 90%;
+  top: 10%;
+  left:10%;
+  width : 80%;
   min-width: 550px;
   height : 75%;
-  background-image: linear-gradient( rgb(58, 130, 189) 90%, rgb(29, 65, 94));
+  border-radius: 20px;
+  box-shadow: 5px 3px 30px black;
+  overflow-y: scroll;
+  background-image: linear-gradient( rgba(58, 130, 189, 0.15) 90%, #1d415e);
+}
+.container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; 
 }
 
 .projectButton {
-  margin-left: 2%;
-  padding-top: 2%;
-  margin-right: 2%;
-  margin-bottom: 2%;
+  margin-left: 1%;
+  padding-top: 1%;
+  margin-right: 1%;
+  margin-bottom: 1%;
   min-width: 100px;
   min-height: 30px;
   max-height: 45px;
   width : 28%;
   height : 10%;
   cursor: pointer;
-  align-content: center;
-  text-align: center;
-  background-image: linear-gradient(#3dddad 90%,#1f6752);
   float: left;
+  background:    #3d85c6;
+  background:    -webkit-linear-gradient(#3d85c6, #073763);
+  background:    linear-gradient(#3d85c6, #073763);
+  border-radius: 5px;
+  box-shadow:    0 3px #071c30;
+  padding:       8px 20px;
+  color:         #ffffff;
+  display:       inline-block;
+  font:          normal 700 24px/1 "Noto Sans", sans-serif;
+  text-align:    center;
+  text-shadow:   2px 2px #000000;
+  overflow: hidden;
 }
 .projectButton:hover{
-  background-color: #f1f1ff;
+  opacity: .8;
 }

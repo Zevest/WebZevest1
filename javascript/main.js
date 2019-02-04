@@ -1,8 +1,8 @@
 window.addEventListener("load",main);
 var projectList = []
 var targetPath = {};
-
 var num = 0;
+
 function main(){
   createTitle();
   makeCenter();
@@ -15,15 +15,14 @@ function main(){
 function createTitle(){
   h1 = document.createElement("H1");
   h1.innerHTML = "University Project"
-  h1.left = "50%"
-  h1.align = "center"
+  h1.className = "Title";
   document.body.appendChild(h1);
 }
 
 function makeCenter(){
-  center = document.createElement('div');
+  center = document.createElement("div");
   center.className = "container";
-  document.body.appendChild(center);
+  document.body.appendChild(center);;
 }
 
 function addButton(prj){
