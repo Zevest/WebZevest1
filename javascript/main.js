@@ -7,6 +7,7 @@ function main(){
   createTitle();
   makeCenter();
   addProjectFolder("TP1 Rectangles","TP1/index.html");
+  addProjectFolder("TP1 width p5.js", "TP1_with_p5/inndex.html");
   projectList.forEach(addButton);
 
 }
