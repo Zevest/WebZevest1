@@ -1,6 +1,6 @@
 window.addEventListener("load",main);
 var projectList = []
-var targetPath;
+var targetPath = {};
 
 var num = 0;
 function main(){
@@ -29,16 +29,16 @@ function makeCenter(){
 function addButton(prj){
   var element = document.createElement("div");
   element.className = "projectButton";
-  element.id = "button_" + num;
+  element.id = "B"+num;
   num++;
   element.innerHTML = prj.name;
-  targetPath =  prj.path;
-  element.addEventListener('click', goTo);
+  targetPath[element.id] = prj.path;
+  element.addEventListener('click', goTo, this);
   center.appendChild(element);
 }
 
-function goTo(){
-  window.location.assign(targetPath);
+function goTo(element){
+    window.location.assign(targetPath[element.target.id]);
 }
 
 
