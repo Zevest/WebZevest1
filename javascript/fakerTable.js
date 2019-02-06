@@ -17,7 +17,11 @@ function createPerson(){
   var person = {lastName: faker.fake("{{name.lastName}}"),
                 firstName: faker.fake("{{name.firstName}}"),
                 age: random(18,100).toString(),
+<<<<<<< HEAD
                 job: faker.fake("{{name.jobTitle}}"),
+=======
+                job: faker.fake("{{name.jobType}} {{name.jobArea}}"),
+>>>>>>> 5d724aaafeb6812daaa6b087a6158735e596c514
                 address: faker.fake("{{address.streetAddress}}"),
                 num: faker.fake("{{phone.phoneNumber}}")
               };
