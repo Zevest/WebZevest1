@@ -8,6 +8,7 @@ function main(){
   makeCenter();
   addProjectFolder("TP1 Rectangles","TP1/index.html");
   addProjectFolder("TP1 width p5.js", "TP1_with_p5/index.html");
+  addProjectFolder("TP2 Faker.js", "TP2/index.html");
   projectList.forEach(addButton);
 
 }
