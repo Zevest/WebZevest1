@@ -68,7 +68,7 @@ function createTr(property, id){
   var row = document.createElement("tr");
   for(i = 0; i < property.length; i++){
     var cell = document.createElement("td");
-    cell.innerHTML = property[i];
+    cell.textContent = property[i];
     cell.bgColor = "black";
     cell.style.color = "white";
     cell.style.cursor = "pointer"
