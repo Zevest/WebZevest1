@@ -29,7 +29,7 @@ function objectToRow(person){
   var row = document.createElement("tr");
   for(key in person){
     cell = document.createElement("td");
-    cell.innerHTML = person[key];
+    cell.textContent = person[key];
     cell.style.border = "1px solid black";
     row.appendChild(cell);
   }
