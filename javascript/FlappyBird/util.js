@@ -36,14 +36,11 @@ class FlappyNum {
     if (num == 0) {
       w = 1;
     }
-    20;
     for (let i = 0; i < w; i++) {
       let numb = parseInt(num.toString().charAt(i));
-      //console.log(numb)
       arr.push(FlappyNum.createNum(numb));
     }
     return arr;
-    //FlappyNum.display(arr, x, y);
   }
 
   static display(arr, x, y) {
@@ -54,8 +51,6 @@ class FlappyNum {
     }
   }
   static createNum(num) {
-    // 293 160 10 16 /// 5 10
-    //console.log(num);
     if (num > 1 && num < 10) {
       return new ImageCroped(img, 292 + ((num - 2) % 4) * (CARWIDTH + CARSPACE), 160 + Math.floor(((num - 2) / 4)) * (CARHEIGHT + 4), CARWIDTH, CARHEIGHT);
     } else if (num == 1) {
@@ -87,7 +82,6 @@ class FlappyNum {
   }
 
 }
-
 
 function closest(arr, x) {
   if (arr.length > 0) {

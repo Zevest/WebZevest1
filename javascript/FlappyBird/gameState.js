@@ -2,9 +2,13 @@ function play() {
   updateBg();
   bird.update();
   displayBg();
+  displayScore()
+  bird.display();
+}
+
+function displayScore() {
   let scoreFont = FlappyNum.numToArray(score, font);
   FlappyNum.display(scoreFont, width / SCALE / 2, height / SCALE / 4);
-  bird.display();
 }
 
 function updateBg() {
@@ -41,11 +45,12 @@ function wait() {
 function dead() {
   displayBg();
   bird.display();
-
+  displayScore()
 }
 
 function fall() {
   bird.update();
   displayBg();
+  displayScore()
   bird.display();
 }
