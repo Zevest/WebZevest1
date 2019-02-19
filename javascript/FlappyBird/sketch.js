@@ -29,9 +29,9 @@ const MENU = 'menu';
 const FALLING = 'fall';
 
 function preload() {
-  img = loadImage('ressources/Mobile - Flappy Bird - Version 12 Sprites.png');
-  pointSound = loadSound('ressources/coin.wav');
-  slop = loadSound('ressources/fail.wav');
+  img = loadImage('../ressources/FlappyBird/Mobile - Flappy Bird - Version 12 Sprites.png');
+  pointSound = loadSound('../ressources/FlappyBird/coin.wav');
+  slop = loadSound('../ressources/FlappyBird/fail.wav');
 }
 
 function reset() {
