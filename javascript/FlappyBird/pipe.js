@@ -6,7 +6,7 @@ class Pipe {
     this.top = this.h - this.spacing;
     this.bottom = this.h + this.spacing;
     this.w = 28;
-    this.x = 180;
+    this.x = 200;
     this.upPipe;
     this.downPipe;
     this.passed = false;
