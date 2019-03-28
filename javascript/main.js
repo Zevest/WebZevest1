@@ -12,7 +12,6 @@ function main() {
   addProjectFolder("Flappy Bird", "Flappy Bird/index.html");
   addProjectFolder("XOR", "XOR/index.html");
   projectList.forEach(addButton);
-
 }
 
 function createTitle() {
