@@ -10,6 +10,8 @@ function main() {
   addProjectFolder("TP1 width p5.js", "TP1_with_p5/index.html");
   addProjectFolder("TP2 Faker.js", "TP2/index.html");
   addProjectFolder("Flappy Bird", "Flappy Bird/index.html");
+  addProjectFolder("Neural Network Test", "NN/index.html");
+  addProjectFolder("XOR", "XOR/index.html");
   projectList.forEach(addButton);
 
 }
