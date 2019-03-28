@@ -3,35 +3,33 @@ var people = [] // contain all person object
 var table;
 
 
-function main(){
+function main() {
   // faker.locale = "fr";
   var totalPeople = 50;
-  for(i = 0; i < totalPeople; i++){
+  for (i = 0; i < totalPeople; i++) {
     people.push(createPerson());
   }
   buildTable();
 }
 
 // Return a person object
-function createPerson(){
-  var person = {lastName: faker.fake("{{name.lastName}}"),
-                firstName: faker.fake("{{name.firstName}}"),
-                age: random(18,100).toString(),
-<<<<<<< HEAD
-                job: faker.fake("{{name.jobTitle}}"),
-=======
-                job: faker.fake("{{name.jobType}} {{name.jobArea}}"),
->>>>>>> 5d724aaafeb6812daaa6b087a6158735e596c514
-                address: faker.fake("{{address.streetAddress}}"),
-                num: faker.fake("{{phone.phoneNumber}}")
-              };
+function createPerson() {
+  var person = {
+    lastName: faker.fake("{{name.lastName}}"),
+    firstName: faker.fake("{{name.firstName}}"),
+    age: random(18, 100).toString(),
+    job: faker.fake("{{name.jobTitle}}"),
+    job: faker.fake("{{name.jobType}} {{name.jobArea}}"),
+    address: faker.fake("{{address.streetAddress}}"),
+    num: faker.fake("{{phone.phoneNumber}}")
+  };
   return person;
 }
 
 // Return a row width a person's data
-function objectToRow(person){
+function objectToRow(person) {
   var row = document.createElement("tr");
-  for(key in person){
+  for (key in person) {
     cell = document.createElement("td");
     cell.textContent = person[key];
     cell.style.border = "1px solid black";
@@ -41,36 +39,36 @@ function objectToRow(person){
 }
 
 // Return a Table element containaing people's data
-function makeTable(content){
+function makeTable(content) {
   var tempTable = document.createElement("table");
   tempTable.appendChild(createTr(["Last name", "First name", "Age", "Job", "Address", "Phone Number"],
-                                ["lastName", "firstName", "age", "job", "address", "num"]));
-  for(i = 0; i< content.length; i++){
+    ["lastName", "firstName", "age", "job", "address", "num"]));
+  for (i = 0; i < content.length; i++) {
     tempTable.appendChild(objectToRow(content[i]));
   }
   return tempTable;
 }
 
 //  Add people to the body
-function buildTable(){
+function buildTable() {
   table = makeTable(people);
   table.style.borderCollapse = "collapse";
   table.style.border = "1px solid black";
   document.body.appendChild(table);
 }
 // Sort people by the property clicked on
-function sortByProperty(element){
+function sortByProperty(element) {
   people.sort(function(a, b) {
-      return a[element.target.id].localeCompare(b[element.target.id]);
+    return a[element.target.id].localeCompare(b[element.target.id]);
   });
   document.body.removeChild(table);
   buildTable();
 }
 
 // Add Property of the Table  to the body
-function createTr(property, id){
+function createTr(property, id) {
   var row = document.createElement("tr");
-  for(i = 0; i < property.length; i++){
+  for (i = 0; i < property.length; i++) {
     var cell = document.createElement("td");
     cell.textContent = property[i];
     cell.bgColor = "black";
@@ -83,6 +81,6 @@ function createTr(property, id){
   return row;
 }
 // Return random number
-function random(min, max){
-  return Math.floor(Math.random()*(max - min)) + min;
+function random(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
 }
