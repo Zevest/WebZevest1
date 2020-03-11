@@ -4,7 +4,7 @@ var table;
 
 
 function main() {
-  // faker.locale = "fr";
+  faker.locale = "fr";
   var totalPeople = 50;
   for (i = 0; i < totalPeople; i++) {
     people.push(createPerson());
